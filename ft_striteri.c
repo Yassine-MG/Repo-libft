@@ -6,7 +6,7 @@
 /*   By: ymghazli <ymghazli@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:43:58 by yassine           #+#    #+#             */
-/*   Updated: 2023/12/10 18:12:27 by ymghazli         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:01:57 by ymghazli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,15 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		s++;
 	}
 }
+
+// #include<stdio.h>
+
+// void addOne(int i, char *a){
+// 	*a -= 32;
+// }
+
+// int main(){
+// 	char a[] = "hello";
+// 	ft_striteri(a, &addOne);
+// 	printf("%s\n",a);
+// }

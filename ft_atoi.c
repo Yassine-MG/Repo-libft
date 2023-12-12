@@ -6,7 +6,7 @@
 /*   By: ymghazli <ymghazli@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:42:20 by yassine           #+#    #+#             */
-/*   Updated: 2023/12/10 18:09:53 by ymghazli         ###   ########.fr       */
+/*   Updated: 2023/12/12 12:03:50 by ymghazli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,12 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * neg);
 }
+
+// int main(){
+// 	char a[] = "x";
+// 	char b[] = "x"; 
+// 	int resulta = ft_atoi(a);
+// 	int resultb = atoi(b);
+// 	printf("%d\n", resulta);
+// 	printf("%d \n", resultb);
+// }
