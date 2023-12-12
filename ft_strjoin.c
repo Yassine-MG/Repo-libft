@@ -6,7 +6,7 @@
 /*   By: ymghazli <ymghazli@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:44:03 by yassine           #+#    #+#             */
-/*   Updated: 2023/12/10 18:12:31 by ymghazli         ###   ########.fr       */
+/*   Updated: 2023/12/12 10:54:38 by ymghazli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char	*ft_strcpy(const char *src, char *dst)
+static char	*ft_strcpy(const char *src, char *dst)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ char	*ft_strcpy(const char *src, char *dst)
 	return (dst);
 }
 
-char	*ft_strcat(const char *src, char *dst)
+static char	*ft_strcat(const char *src, char *dst)
 {
 	int	i;
 	int	j;

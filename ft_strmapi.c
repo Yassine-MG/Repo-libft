@@ -6,7 +6,7 @@
 /*   By: ymghazli <ymghazli@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:44:23 by yassine           #+#    #+#             */
-/*   Updated: 2023/12/10 18:12:56 by ymghazli         ###   ########.fr       */
+/*   Updated: 2023/12/12 10:57:07 by ymghazli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,23 +43,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 
 // char addOne(unsigned int index, char c) {
-//     return (c + 1);
+//     return (c - 32);
 // }
 
 // int main() {
-//     // Input string
 //     char input[] = "hello";
-
-//     // Applying ft_strmapi function with addOne function
 //     char *result = ft_strmapi(input, &addOne);
-
-//     if (result != NULL) {
-//         printf("Original string: %s\n", input);
-//         printf("Transformed string: %s\n", result);
-//         free(result); // Free allocated memory for the result
-//     } else {
-//         printf("Memory allocation failed.\n");
-//     }
-
+//     printf("Original string: %s\n", input);
+//     printf("Transformed string: %s\n", result);
 //     return (0);
 // }

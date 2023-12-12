@@ -6,7 +6,7 @@
 /*   By: ymghazli <ymghazli@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:44:47 by yassine           #+#    #+#             */
-/*   Updated: 2023/12/10 18:17:22 by ymghazli         ###   ########.fr       */
+/*   Updated: 2023/12/12 10:58:11 by ymghazli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_strlength(char const *c)
+static int	ft_strlength(char const *c)
 {
 	int	i;
 
@@ -26,7 +26,8 @@ int	ft_strlength(char const *c)
 	return (i);
 }
 
-void	ft_cpy(size_t len, char *substring, unsigned int start, char const *s)
+static void	ft_cpy(size_t len, char *substring, unsigned int start,
+		char const *s)
 {
 	size_t	j;
 

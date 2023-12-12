@@ -6,7 +6,7 @@
 /*   By: ymghazli <ymghazli@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:43:53 by yassine           #+#    #+#             */
-/*   Updated: 2023/12/10 18:12:23 by ymghazli         ###   ########.fr       */
+/*   Updated: 2023/12/12 10:48:25 by ymghazli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 char	*ft_strdup(const char *s)
 {
 	char	*str;
-	char	*p;
+	int		i;
 	int		length;
 
+	i = 0;
 	length = 0;
 	while (s[length])
 	{
@@ -27,13 +28,11 @@ char	*ft_strdup(const char *s)
 	str = malloc(length + 1);
 	if (str == NULL)
 		return (NULL);
-	p = str;
-	while (*s)
+	while (s[i])
 	{
-		*p = *s;
-		p++;
-		s++;
+		str[i] = s[i];
+		i++;
 	}
-	*p = '\0';
+	str[i++] = '\0';
 	return (str);
 }

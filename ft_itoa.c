@@ -6,7 +6,7 @@
 /*   By: ymghazli <ymghazli@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:39:16 by yassine           #+#    #+#             */
-/*   Updated: 2023/12/10 18:10:46 by ymghazli         ###   ########.fr       */
+/*   Updated: 2023/12/12 10:53:01 by ymghazli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char	*ft_reverse_str(int i, char *str)
+static char	*ft_reverse_str(int i, char *str)
 {
 	char	temp;
 	int		start;
@@ -33,21 +33,7 @@ char	*ft_reverse_str(int i, char *str)
 	return (str);
 }
 
-char	*ft_malloc(int n, char *numstr, int num_digits)
-{
-	if (n < 0)
-	{
-		numstr = (char *)malloc(((num_digits + 2) * sizeof(char)));
-		return (numstr);
-	}
-	else
-	{
-		numstr = (char *)malloc(((num_digits + 1) * sizeof(char)));
-		return (numstr);
-	}
-}
-
-void	ft_convert_to_string(int n, char *numstr, int *i)
+static void	ft_convert_to_string(int n, char *numstr, int *i)
 {
 	bool			is_negative;
 	unsigned int	num;
@@ -72,7 +58,7 @@ void	ft_convert_to_string(int n, char *numstr, int *i)
 	ft_reverse_str(*i, numstr);
 }
 
-int	count_digits(int n)
+static int	count_digits(int n)
 {
 	unsigned int	number;
 	int				num_digits;
@@ -101,7 +87,11 @@ char	*ft_itoa(int n)
 	num_digits = 0;
 	i = 0;
 	num_digits = count_digits(n);
-	numstr = ft_malloc(n, numstr, num_digits);
+	if (n < 0)
+	{
+		num_digits++;
+	}
+	numstr = malloc(num_digits + 1);
 	if (numstr == NULL)
 		return (NULL);
 	if (n == 0)

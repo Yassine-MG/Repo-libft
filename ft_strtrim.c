@@ -6,7 +6,7 @@
 /*   By: ymghazli <ymghazli@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:44:41 by yassine           #+#    #+#             */
-/*   Updated: 2023/12/10 18:13:14 by ymghazli         ###   ########.fr       */
+/*   Updated: 2023/12/12 10:57:51 by ymghazli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-size_t	strlen(const char *string)
+static size_t	strlength(const char *string)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ size_t	strlen(const char *string)
 	return (i);
 }
 
-int	ft_char_in_set(char c, char const *set)
+static int	ft_char_in_set(char c, char const *set)
 {
 	size_t	i;
 
@@ -47,7 +47,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 
-	end = strlen(s1);
+	end = strlength(s1);
 	i = 0;
 	start = 0;
 	while (s1[start] && ft_char_in_set(s1[start], set))

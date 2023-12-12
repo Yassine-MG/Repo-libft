@@ -6,7 +6,7 @@
 /*   By: ymghazli <ymghazli@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:43:39 by yassine           #+#    #+#             */
-/*   Updated: 2023/12/10 18:12:15 by ymghazli         ###   ########.fr       */
+/*   Updated: 2023/12/12 10:54:17 by ymghazli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char	*ft_duplicate(const char *s, size_t n)
+static char	*ft_duplicate(const char *s, size_t n)
 {
 	size_t	i;
 	char	*str;
 
 	i = 0;
-	str = NULL;
 	if (n == 0)
 		return (NULL);
 	str = (char *)malloc(sizeof(char) * (n + 1));
@@ -35,7 +34,7 @@ char	*ft_duplicate(const char *s, size_t n)
 	return (str);
 }
 
-size_t	ft_count_word(const char *s, char c)
+static size_t	ft_count_word(const char *s, char c)
 {
 	size_t	word_count;
 	size_t	i;
@@ -56,7 +55,7 @@ size_t	ft_count_word(const char *s, char c)
 	return (word_count);
 }
 
-char	**ft_free(char **list)
+static char	**ft_free(char **list)
 {
 	size_t	j;
 
